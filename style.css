@@ -1,1 +1,139 @@
-/* Add styles here */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
+
+/* Define a modern color palette and base styles */
+:root {
+  --font-sans: 'Syne', sans-serif;
+
+  /* OKLCH Colors - more vibrant and perceptually uniform */
+  --background-color: oklch(15% 0.02 240);
+  --text-color: oklch(95% 0.01 240);
+  --primary-color: oklch(75% 0.25 280);
+  --secondary-color: oklch(80% 0.2 150);
+  --accent-color: oklch(70% 0.3 40);
+
+  --card-background: oklch(20% 0.03 240);
+  --shadow-color: oklch(0% 0 0 / 0.5);
+  --glow-color: oklch(75% 0.25 280 / 0.5);
+  --border-color: oklch(35% 0.05 240);
+}
+
+/* Base body and typography styles */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 2rem;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"><path fill="%239C92AC" fill-opacity="0.1" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"></path></svg>');
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-shadow: 0 0 15px var(--glow-color);
+}
+
+/* Film card grid layout */
+#film-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* film-card specific styles, refactored from the component */
+film-card {
+  background-color: var(--card-background);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px var(--shadow-color);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+film-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px var(--shadow-color), 0 0 30px var(--glow-color);
+}
+
+.film-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.film-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 10px var(--secondary-color));
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+.highlight {
+  background-color: oklch(30% 0.1 280 / 0.5);
+  border-radius: 8px;
+}
+
+.warning-text {
+  color: var(--accent-color);
+  font-style: italic;
+  display: block;
+  font-size: 0.9rem;
+}
+
+.notes-button {
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.notes-button:hover {
+  background-color: var(--primary-color);
+  color: var(--card-background);
+  box-shadow: 0 0 15px var(--glow-color);
+}
+
+.notes-row {
+  display: none;
+}
+
+.notes-row.visible {
+  display: table-row;
+}
+
+.notes-content {
+  background-color: oklch(22% 0.05 240 / 0.7);
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+}

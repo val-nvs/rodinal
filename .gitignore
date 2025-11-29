@@ -1,0 +1,14 @@
+# IDE - specific files
+.idea/
+.vscode/
+.idx/
+
+# Dependencies
+/node_modules
+
+# Build output
+/dist
+/build
+
+# Misc
+.DS_Store
