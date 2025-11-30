@@ -91,7 +91,7 @@ customElements.define('film-card', FilmCard);
 
 const filmData = {
     "Ilford HP5+": {
-        image: "media/hp5.jpg",
+        image: "media/hp5.png",
         box_iso: "400",
         developments: [
             { iso: "100", time: "6", temp: "20C" },
@@ -105,7 +105,7 @@ const filmData = {
         ]
     },
     "Ilford Delta 400 Pro": {
-        image: "https://i.imgur.com/1QZxq3c.jpeg",
+        image: "media/delta400.png",
         box_iso: "400",
         developments: [
             { iso: "100", time: "5:30", temp: "20C" },
@@ -118,7 +118,7 @@ const filmData = {
         ]
     },
     "Kodak Double-X (5222)": {
-        image: "https://i.imgur.com/p7c0N3u.jpeg",
+        image: "media/doublex.png",
         box_iso: "250",
         developments: [
             { iso: "200", time: "5", temp: "20C", dilution: "1+20" },
@@ -129,7 +129,7 @@ const filmData = {
         ]
     },
     "Ilford Delta 3200 Pro": {
-        image: "https://i.imgur.com/A6j4f9j.jpeg",
+        image: "media/delta3200.png",
         box_iso: "3200",
         developments: [
             { iso: "400", time: "5:30", temp: "20C" },
@@ -143,7 +143,7 @@ const filmData = {
         ]
     },
     "Ilford Delta 100 Pro": {
-        image: "https://i.imgur.com/3b663DB.jpeg",
+        image: "media/delta100.png",
         box_iso: "100",
         developments: [
             { iso: "50", time: "7", temp: "20C" },
@@ -151,7 +151,7 @@ const filmData = {
         ]
     },
     "Kentmere 100": {
-        image: "https://i.imgur.com/9g7YSJ1.jpeg",
+        image: "media/ken100.png",
         box_iso: "100",
         developments: [
             { iso: "100", time: "9", temp: "20C" },
@@ -162,7 +162,7 @@ const filmData = {
         ]
     },
     "Kentmere 400": {
-        image: "https://i.imgur.com/nJbB2g6.jpeg",
+        image: "media/ken400.png",
         box_iso: "400",
         developments: [
             { iso: "400", time: "7:30", temp: "20C" },
@@ -173,7 +173,7 @@ const filmData = {
         ]
     },
     "Kodak TMax 100": {
-        image: "https://i.imgur.com/Y1Q3z5P.jpeg",
+        image: "media/tmax100.png",
         box_iso: "100",
         developments: [
             { iso: "64", time: "5:30-6", temp: "20C", notes: "Same time applies across ASA/ISO range; Data is taken from a previous version of this film, starting point time should be similar" },
@@ -183,7 +183,7 @@ const filmData = {
         ]
     },
     "Kodak TMax 400": {
-        image: "https://i.imgur.com/L1Z3T8g.jpeg",
+        image: "media/tmax400.png",
         box_iso: "400",
         developments: [
             { iso: "320", time: "5", temp: "20C" },
@@ -194,7 +194,7 @@ const filmData = {
         ]
     },
     "Kodak TMax P3200": {
-        image: "https://i.imgur.com/u5S3V3s.jpeg",
+        image: "media/tmaxp3200.png",
         box_iso: "3200",
         developments: [
             { iso: "1000", time: "7", temp: "20C", dilution: "1+24", notes: "Data is taken from a previous version of this film, starting point time should be similar" },
@@ -204,7 +204,7 @@ const filmData = {
         ]
     },
     "Ilford FP4+": {
-        image: "https://i.imgur.com/S5rN6jY.jpeg",
+        image: "media/fp4.png",
         box_iso: "125",
         developments: [
             { iso: "25", time: "4", temp: "20C", notes: "Agitation: continuous first 30 secs, then 10 secs every 30 secs." },
@@ -216,7 +216,7 @@ const filmData = {
         ]
     },
     "Fomapan 100": {
-        image: "https://i.imgur.com/pQ4jSgG.jpeg",
+        image: "media/Fomapan100.png",
         box_iso: "100",
         developments: [
             { iso: "100", time: "4", temp: "20C" },
@@ -228,7 +228,7 @@ const filmData = {
         ]
     },
     "Fomapan 200": {
-        image: "https://i.imgur.com/xJJZJgY.jpeg",
+        image: "media/fomapan200.png",
         box_iso: "200",
         developments: [
             { iso: "25", time: "3:30", temp: "20C" },
@@ -237,7 +237,7 @@ const filmData = {
         ]
     },
     "Fomapan 400": {
-        image: "https://i.imgur.com/u4A2z8G.jpeg",
+        image: "media/fomapan400.png",
         box_iso: "400",
         developments: [
             { iso: "400", time: "5:30", temp: "20C" },
