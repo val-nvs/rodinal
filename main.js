@@ -90,88 +90,6 @@ class FilmCard extends HTMLElement {
 customElements.define('film-card', FilmCard);
 
 const filmData = {
-    "Ilford HP5+": {
-        image: "media/hp5.png",
-        box_iso: "400",
-        developments: [
-            { iso: "100", time: "6", temp: "20C" },
-            { iso: "200", time: "5", temp: "20C" },
-            { iso: "200", time: "4:45", temp: "20C", notes: "Time for Jobo/rotary tube processor" },
-            { iso: "320", time: "8", temp: "20C" },
-            { iso: "400", time: "6", temp: "20C" },
-            { iso: "800", time: "8", temp: "20C" },
-            { iso: "1600", time: "12", temp: "20C" },
-            { iso: "3200", time: "18", temp: "21C" },
-        ]
-    },
-    "Ilford Delta 400 Pro": {
-        image: "media/delta400.png",
-        box_iso: "400",
-        developments: [
-            { iso: "100", time: "5:30", temp: "20C" },
-            { iso: "200", time: "6:30", temp: "20C" },
-            { iso: "250", time: "7:30", temp: "20C", dilution: "1+24" },
-            { iso: "400", time: "9", temp: "20C" },
-            { iso: "800", time: "18:30", temp: "20C" },
-            { iso: "800", time: "16", temp: "24C" },
-            { iso: "3200", time: "40", temp: "20C", notes: "Agitation: continuous first 30 secs, then 1-2 inversions every 2 mins." },
-        ]
-    },
-    "Kodak Double-X (5222)": {
-        image: "media/doublex.png",
-        box_iso: "250",
-        developments: [
-            { iso: "200", time: "5", temp: "20C", dilution: "1+20" },
-            { iso: "250", time: "5:45", temp: "20C" },
-            { iso: "500", time: "7:30", temp: "20C" },
-            { iso: "1000", time: "9:15", temp: "20C" },
-            { iso: "1600", time: "10", temp: "20C", dilution: "1+20" },
-        ]
-    },
-    "Ilford Delta 3200 Pro": {
-        image: "media/delta3200.png",
-        box_iso: "3200",
-        developments: [
-            { iso: "400", time: "5:30", temp: "20C" },
-            { iso: "800", time: "7", temp: "20C" },
-            { iso: "1000", time: "8:30", temp: "20C" },
-            { iso: "1600", time: "9", temp: "20C" },
-            { iso: "3200", time: "11", temp: "20C" },
-            { iso: "6400", time: "18", temp: "20C", dilution: "1+15" },
-            { iso: "6400", time: "20", temp: "20C" },
-            { iso: "12800", time: "40", temp: "20C", notes: "I actually used the 3200 at 12800. Used Rodinal developing for 40 minutes. Very grainy, as expected, but otherwise a good develop. Started at 68 deg F, but didn't control temp, so warmed up, potentially to room temp over the development" },
-        ]
-    },
-    "Ilford Delta 100 Pro": {
-        image: "media/delta100.png",
-        box_iso: "100",
-        developments: [
-            { iso: "50", time: "7", temp: "20C" },
-            { iso: "100", time: "9", temp: "20C" },
-        ]
-    },
-    "Kentmere 100": {
-        image: "media/ken100.png",
-        box_iso: "100",
-        developments: [
-            { iso: "100", time: "9", temp: "20C" },
-            { iso: "200", time: "13", temp: "20C", notes: "Agitation: continuous first 30 seconds, then 10 seconds every 1 minute." },
-            { iso: "800", time: "40*", temp: "20C", notes: "Agitated first minute, then one minute every 10 minutes." },
-            { iso: "1600", time: "N/A", temp: "20C", notes: "Agitate first 10 seconds, then agitate every minute." },
-            { iso: "3200", time: "70", temp: "20C" },
-        ]
-    },
-    "Kentmere 400": {
-        image: "media/ken400.png",
-        box_iso: "400",
-        developments: [
-            { iso: "400", time: "7:30", temp: "20C" },
-            { iso: "400", time: "11:30", temp: "20C", notes: "Dev time in Rodinal 1+25 are severly underdevelop at 7.5 min the recomended time for APX 400 who is well known to be kentmere 400 is 11.5 min in datasheet" },
-            { iso: "800", time: "9", temp: "20C" },
-            { iso: "1600", time: "25", temp: "20C" },
-            { iso: "3200", time: "25", temp: "23C", notes: "I tried it once, they all came out fine, but I don't recommend pushing the Kentmere (or any other film) that hard for contrast situations like mine." },
-        ]
-    },
     "Kodak TMax 100": {
         image: "media/tmax100.png",
         box_iso: "100",
@@ -213,6 +131,98 @@ const filmData = {
             { iso: "200", time: "13", temp: "20C" },
             { iso: "400", time: "20", temp: "20C", dilution: "1+24" },
             { iso: "800", time: "35", temp: "20C", notes: "Agitation: 10 secs every min for first 5 mins, then 10 secs every 5 mins." },
+        ]
+    },
+    "Ilford HP5+": {
+        image: "media/hp5.png",
+        box_iso: "400",
+        developments: [
+            { iso: "100", time: "6", temp: "20C" },
+            { iso: "200", time: "5", temp: "20C" },
+            { iso: "200", time: "4:45", temp: "20C", notes: "Time for Jobo/rotary tube processor" },
+            { iso: "320", time: "8", temp: "20C" },
+            { iso: "400", time: "6", temp: "20C" },
+            { iso: "800", time: "8", temp: "20C" },
+            { iso: "1600", time: "12", temp: "20C" },
+            { iso: "3200", time: "18", temp: "21C" },
+        ]
+    },
+    "Ilford Delta 100 Pro": {
+        image: "media/delta100.png",
+        box_iso: "100",
+        developments: [
+            { iso: "50", time: "7", temp: "20C" },
+            { iso: "100", time: "9", temp: "20C" },
+        ]
+    },
+    "Ilford Delta 400 Pro": {
+        image: "media/delta400.png",
+        box_iso: "400",
+        developments: [
+            { iso: "100", time: "5:30", temp: "20C" },
+            { iso: "200", time: "6:30", temp: "20C" },
+            { iso: "250", time: "7:30", temp: "20C", dilution: "1+24" },
+            { iso: "400", time: "9", temp: "20C" },
+            { iso: "800", time: "18:30", temp: "20C" },
+            { iso: "800", time: "16", temp: "24C" },
+            { iso: "3200", time: "40", temp: "20C", notes: "Agitation: continuous first 30 secs, then 1-2 inversions every 2 mins." },
+        ]
+    },
+
+    "Ilford Delta 3200 Pro": {
+        image: "media/delta3200.png",
+        box_iso: "3200",
+        developments: [
+            { iso: "400", time: "5:30", temp: "20C" },
+            { iso: "800", time: "7", temp: "20C" },
+            { iso: "1000", time: "8:30", temp: "20C" },
+            { iso: "1600", time: "9", temp: "20C" },
+            { iso: "3200", time: "11", temp: "20C" },
+            { iso: "6400", time: "18", temp: "20C", dilution: "1+15" },
+            { iso: "6400", time: "20", temp: "20C" },
+            { iso: "12800", time: "40", temp: "20C", notes: "I actually used the 3200 at 12800. Used Rodinal developing for 40 minutes. Very grainy, as expected, but otherwise a good develop. Started at 68 deg F, but didn't control temp, so warmed up, potentially to room temp over the development" },
+        ]
+    },
+    "Kodak Double-X (5222)": {
+        image: "media/doublex.png",
+        box_iso: "250",
+        developments: [
+            { iso: "200", time: "5", temp: "20C", dilution: "1+20" },
+            { iso: "250", time: "5:45", temp: "20C" },
+            { iso: "500", time: "7:30", temp: "20C" },
+            { iso: "1000", time: "9:15", temp: "20C" },
+            { iso: "1600", time: "10", temp: "20C", dilution: "1+20" },
+        ]
+    },  
+    "Kentmere 100": {
+        image: "media/ken100.png",
+        box_iso: "100",
+        developments: [
+            { iso: "100", time: "9", temp: "20C" },
+            { iso: "200", time: "13", temp: "20C", notes: "Agitation: continuous first 30 seconds, then 10 seconds every 1 minute." },
+            { iso: "800", time: "40*", temp: "20C", notes: "Agitated first minute, then one minute every 10 minutes." },
+            { iso: "1600", time: "N/A", temp: "20C", notes: "Agitate first 10 seconds, then agitate every minute." },
+            { iso: "3200", time: "70", temp: "20C" },
+        ]
+    },
+    "Kentmere 200": {
+        image: "media/ken200.png",
+        box_iso: "200",
+        developments: [
+            { iso: "200", time: "10", temp: "20C" },
+            { iso: "200", time: "8:30", temp: "24C", notes: "Rotary processor" },
+            { iso: "800", time: "N/A", temp: "20C", },
+        ]
+    },
+    "Kentmere 400": {
+        image: "media/ken400.png",
+        box_iso: "400",
+        developments: [
+            { iso: "400", time: "7:30", temp: "20C" },
+            { iso: "400", time: "11:30", temp: "20C", notes: "Dev time in Rodinal 1+25 are severly underdevelop at 7.5 min the recomended time for APX 400 who is well known to be kentmere 400 is 11.5 min in datasheet" },
+            { iso: "800", time: "9", temp: "20C" },
+            { iso: "1600", time: "25", temp: "20C" },
+            { iso: "3200", time: "25", temp: "23C", notes: "I tried it once, they all came out fine, but I don't recommend pushing the Kentmere (or any other film) that hard for contrast situations like mine." },
         ]
     },
     "Fomapan 100": {
