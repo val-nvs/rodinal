@@ -193,7 +193,14 @@ const filmData = {
             { iso: "1000", time: "9:15", temp: "20C" },
             { iso: "1600", time: "10", temp: "20C", dilution: "1+20" },
         ]
-    },  
+    },
+    "Ilford XP2 Super": {
+        image: "media/xp2.png",
+        box_iso: "400",
+        developments: [
+            { iso: "400", time: "18", temp: "20C" },
+        ]
+    },
     "Kentmere 100": {
         image: "media/ken100.png",
         box_iso: "100",
